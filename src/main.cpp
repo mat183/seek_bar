@@ -155,7 +155,7 @@ int main(void) {
 
     initOpenGL();
 
-    SkImageInfo imageInfo = SkImageInfo::MakeN32Premul(windowWidth, windowHeight);
+    SkImageInfo imageInfo = SkImageInfo::Make(windowWidth, windowHeight, kRGBA_8888_SkColorType, kPremul_SkAlphaType);
     auto surface = SkSurfaces::Raster(imageInfo);
 
     SeekBar bar{surface->getCanvas(), windowWidth, windowHeight};

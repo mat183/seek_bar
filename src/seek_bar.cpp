@@ -102,7 +102,7 @@ void SeekBar::drawIndeterminateLoading() {
         _height);
     _canvas->drawRect(unfilledRect, animation);
 
-    animation.setColor(SK_ColorBLUE);
+    animation.setColor(SK_ColorRED);
     animation.setStyle(SkPaint::kFill_Style);
     SkRect animatedRect = SkRect::MakeXYWH(
         _padding + offset,
@@ -173,7 +173,7 @@ void SeekBar::drawSeekBarDividedByChapters() {
 }
 
 void SeekBar::drawChapter(const Chapter& chapter, SkPaint& chapterPaint, const double startX, const double endX) {
-    chapterPaint.setColor(SK_ColorBLUE);
+    chapterPaint.setColor(SK_ColorRED);
     SkRect filledRect = SkRect::MakeXYWH(
         startX,
         _windowHeight / 2 - chapter.height / 2,
@@ -230,7 +230,7 @@ void SeekBar::drawElapsedTime() {
 
 void SeekBar::drawCursor() {
     SkPaint paint;
-    paint.setColor(SK_ColorBLUE);
+    paint.setColor(SK_ColorRED);
     _canvas->drawCircle(_cursorX, _cursorY, defaultCursorRadius, paint);
 }
 
